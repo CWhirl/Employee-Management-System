@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const util = require('util');
 
 const connection = mysql.createConnection({
-    host: 'localhost',
+    host: process.env.DB_HOST,
     port: 3306,
     user: 'root',
     password: '',
-    database: 'arsenal_DB'
+    database: 'employee_db'
 });
 
 connection.connect((err) => {
